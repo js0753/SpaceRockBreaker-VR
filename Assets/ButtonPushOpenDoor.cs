@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonPushOpenDoor : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class ButtonPushOpenDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => ToggleDoorOpen());
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>().selectEntered.AddListener(x => ToggleDoorOpen());
     }
 
     public void ToggleDoorOpen()
